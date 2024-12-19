@@ -1,0 +1,77 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #88CCF1;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: floralwhite;
+  font-size: 2.5rem;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  padding: none;
+}
+
+.advent-scene {
+  background-image: url('images/lapland-background.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 92vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.day {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.day.locked {
+  background-color: rgba(100, 100, 100, 0.5);
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+.day.unlocked:hover {
+  transform: scale(1.2);
+  background-color: #FF6347;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-btn {
+  color: red;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
